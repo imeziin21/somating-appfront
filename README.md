@@ -1,6 +1,6 @@
 # SOMATING
 
-A new Flutter project.
+소마고 프로젝트 매칭 플랫폼 'SOMATING'
 
 ## Getting Started
 
