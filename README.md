@@ -1,4 +1,4 @@
-# catchingmaching
+# SOMATING
 
 A new Flutter project.
 
