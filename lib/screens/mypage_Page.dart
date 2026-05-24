@@ -27,6 +27,21 @@ class _MypagePageState extends State<MypagePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Row(
+          children: [
+            Image.asset('assets/images/logo.png',width: 30,height: 30,),
+            SizedBox(width: 4,),
+            Text('SOMATING')
+          ],
+        ),
+        titleTextStyle: TextStyle(
+          color: Colors.red,
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
+      ),
       backgroundColor: Colors.white,
       body: Column(
         children: [
