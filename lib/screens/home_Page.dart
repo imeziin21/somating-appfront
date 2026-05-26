@@ -1,6 +1,6 @@
 import 'package:catchingmaching/project/screens/add_project/add_step1.dart';
 import 'package:catchingmaching/screens/community_Page.dart';
-import 'package:catchingmaching/screens/mypage_Page.dart';
+import 'package:catchingmaching/mypage/screens/mypage_Page.dart';
 import 'package:catchingmaching/screens/project_Page.dart';
 import 'package:catchingmaching/project/screens/add_project/add_final.dart';
 import 'package:flutter/material.dart';
@@ -88,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: Row(
           children: [

@@ -1,5 +1,5 @@
 import 'package:catchingmaching/screens/home_Page.dart';
-import 'package:catchingmaching/screens/mypage_Page.dart';
+import 'package:catchingmaching/mypage/screens/mypage_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:catchingmaching/project/widgets/final_button.dart';
 

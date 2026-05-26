@@ -1,8 +1,11 @@
 import 'dart:io';
 
+import 'package:catchingmaching/mypage/screens/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:catchingmaching/mypage/widget/customgesture.dart';
+import 'package:catchingmaching/mypage/widget/customline.dart';
 
 class MypagePage extends StatefulWidget {
   const MypagePage({super.key});
@@ -28,6 +31,7 @@ class _MypagePageState extends State<MypagePage> {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: Row(
           children: [
@@ -195,100 +199,34 @@ class _MypagePageState extends State<MypagePage> {
             ],
           ),
           SizedBox(height: 10,),
-          GestureDetector(
-            onTap: (){},
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              width: double.infinity,
-              height: 50,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(Icons.post_add,color: Colors.grey,),
-                  SizedBox(width: 5,),
-                  Text('내가 작성한 글'),
-                  Spacer(),
-                  Icon(Icons.chevron_right,color: Colors.grey,),
-                ],
-              ),
-            ),
+          Customgesture(
+              icon: Icon(Icons.post_add,color: Colors.grey,),
+              text: '내가 작성한 글',
+              onTap: (){}
           ),
-          Container(
-            height: 1,
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            color: Colors.grey[300],
-            width: double.infinity,
+          Customline(),
+          Customgesture(
+              icon: Icon(Icons.add_box_outlined,color: Colors.grey,),
+              text: '내가 지원한 프로젝트',
+              onTap: (){}
           ),
-          GestureDetector(
-            onTap: (){},
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              width: double.infinity,
-              height: 50,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(Icons.add_box_outlined,color: Colors.grey,),
-                  SizedBox(width: 5,),
-                  Text('내가 지원한 프로젝트'),
-                  Spacer(),
-                  Icon(Icons.chevron_right,color: Colors.grey,),
-                ],
-              ),
-            ),
+          Customline(),
+          Customgesture(
+              icon: Icon(Icons.star_border,color: Colors.grey,),
+              text: '스크랩한 프로젝트',
+              onTap: (){}
           ),
-          Container(
-            height: 1,
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            color: Colors.grey[300],
-            width: double.infinity,
-          ),
-          GestureDetector(
-            onTap: (){},
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              width: double.infinity,
-              height: 50,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(Icons.star_border,color: Colors.grey,),
-                  SizedBox(width: 5,),
-                  Text('스크랩한 프로젝트'),
-                  Spacer(),
-                  Icon(Icons.chevron_right,color: Colors.grey,),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: 1,
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            color: Colors.grey[300],
-            width: double.infinity,
-          ),
-          GestureDetector(
-            onTap: (){},
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              width: double.infinity,
-              height: 50,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(Icons.settings,color: Colors.grey,),
-                  SizedBox(width: 5,),
-                  Text('계정 설정'),
-                  Spacer(),
-                  Icon(Icons.chevron_right,color: Colors.grey,),
-                ],
-              ),
-            ),
-          ),
+          Customline(),
+          Customgesture(
+              icon: Icon(Icons.settings,color: Colors.grey,),
+              text: '계정 설정',
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Setting())
+                );
+              },
+          )
         ],
       ),
     );
